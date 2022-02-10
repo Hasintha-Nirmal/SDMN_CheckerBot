@@ -39,16 +39,22 @@ if(!isBanned($userId) && !isMuted($userId)){
     addUser($userId);
     bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Hello @$username,
-
-Type /cmds to know all my commands!</b>
+        'text'=>"<b>
+➲ HEY I AM ALIVE
+━━━━━━━━━━━━━━━━
+➲ Welcome: $name
+➲ User ID: $id
+➲ User Type: $type
+➲ Select any button below to know more
+━━━━━━━━━━━━━━━━
+</b>
 
 $messagesec",
 	'parse_mode'=>'html',
 	'reply_to_message_id'=> $message_id,
     'reply_markup'=>json_encode(['inline_keyboard' => [
         [
-          ['text' => "💠 Created By 💠", 'url' => "t.me/ninjanaveen"]
+          ['text' => "💠 Created By 💠", 'url' => "t.me/flagtousa"]
         ],
         [
           ['text' => "💎 Source Code 💎", 'url' => "t.me/IndianBotsChat"]
